@@ -1,0 +1,84 @@
+:root{
+    --main-color: #e22242;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Header */
+
+header{
+    height: 70px;
+    border-bottom: 2px solid var(--main-color);
+}
+
+header #brand{
+    font-size: 2em;
+    line-height: 68px;
+    font-weight: 100;
+    color: var(--main-color);
+}
+
+header #mobile-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+header .mobile-btn{
+    display: block;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+header .mobile-btn:active{
+    background-color: #f1f1f1;
+}
+header .mobile-btn h2{
+    line-height: 68px;
+    padding: 0px 20px;
+    width: 80px;
+    color: var(--main-color);
+}
+
+header .empty{
+    width: 80px;
+}
+
+#mobile{
+    height: 0;
+    overflow: hidden;
+    transition: height 900ms;
+    background-color: #f1f1f1;
+}
+
+#mobile ul{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#mobile ul li{
+    
+}
+
+#mobile ul li a{
+    display: block;
+    padding: 16px;
+    color: var(--main-color);
+}
+#mobile ul li a:active{
+    background-color: #fff;
+}
+
