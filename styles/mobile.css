@@ -21,12 +21,18 @@ body{
 header{
     height: 70px;
     border-bottom: 2px solid var(--main-color);
+    box-shadow: 0 1px 4px 1px #888;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 5;
 }
 
 header #brand{
     font-size: 2em;
     line-height: 68px;
-    font-weight: 100;
+    font-weight: 300;
     color: var(--main-color);
 }
 
@@ -42,7 +48,7 @@ header .mobile-btn{
     cursor: pointer;
 }
 header .mobile-btn:active{
-    background-color: #f1f1f1;
+    background-color: #eee;
 }
 header .mobile-btn h2{
     line-height: 68px;
@@ -58,8 +64,12 @@ header .empty{
 #mobile{
     height: 0;
     overflow: hidden;
+    z-index: 5;
     transition: height 900ms;
-    background-color: #f1f1f1;
+    background-color: #eee;
+    position: fixed;
+    width: 100%;
+    top: 70px;
 }
 
 #mobile ul{
@@ -82,3 +92,88 @@ header .empty{
     background-color: #fff;
 }
 
+/* Showcase */
+
+#showcase{
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.slide{
+    height: calc(100vh - 70px);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slide h1{
+    font-size: 2.5em;
+    color: #fff;
+    padding: 0 20px;
+    text-shadow: 1px 1px 2px #222;
+    background-color: rgba(100,100,100,0.4);
+    border-radius: 10px;
+}
+.slide p{
+    padding: 0 40px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #222;
+}
+
+.slide0{
+    background-image: url(../images/slide0.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1000ms;
+}
+.slide1{
+    background-image: url(../images/slide1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+.slide2{
+    background-image: url(../images/slide2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+
+#left, #right{
+    position: absolute;
+    z-index: 4;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: color 700ms;
+}
+#left:hover , #right:hover{
+    color: red;
+}
+
+#left{
+    top: calc(50vh - 2em);
+    font-size: 2em;
+    left: 5px;
+}
+
+#right{
+    right: 5px;
+    top: calc(50vh - 2em);
+    font-size: 2em;
+}
