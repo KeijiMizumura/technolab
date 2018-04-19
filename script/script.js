@@ -21,25 +21,26 @@ var second = document.getElementById("slide1");
 var third = document.getElementById("slide2");
 
 
-document.getElementById("right").addEventListener('click', function(){
-    switch(currentSlide){
+document.getElementById("right").addEventListener('click', moveRight);
+function moveRight() {
+    switch (currentSlide) {
         case 1:
             first.style.opacity = 0;
             second.style.opacity = 1;
             currentSlide = 2;
-        break;
+            break;
         case 2:
             second.style.opacity = 0;
             third.style.opacity = 1;
             currentSlide = 3;
-        break;
+            break;
         case 3:
             third.style.opacity = 0;
             first.style.opacity = 1;
             currentSlide = 1;
-        break;
+            break;
     }
-});
+}setInterval(moveRight, 5000);
 
 document.getElementById("left").addEventListener('click', function () {
     switch (currentSlide) {

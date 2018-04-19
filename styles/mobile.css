@@ -177,3 +177,21 @@ header .empty{
     top: calc(50vh - 2em);
     font-size: 2em;
 }
+
+/* Features */
+#features #boxes .box{
+    padding: 35px;
+}
+
+#features #boxes .box h1{
+    font-size: 5em;
+    color: var(--main-color);
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 30px;
+}
